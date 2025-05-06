@@ -1,0 +1,287 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: url('vish1.jpeg') no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px 30px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    }
+
+    .navbar img {
+      height: 100px;
+      border-radius: 50%;
+      animation: logo-pop 1s ease-in-out;
+    }
+
+    .navbar h1 {
+      font-size: 30px;
+      font-weight: bold;
+      color: #ffeb3b;
+      text-shadow: 2px 2px #000;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    @keyframes logo-pop {
+      from { transform: scale(0.2); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .popup-text {
+      margin: 60px auto 40px;
+      font-size: 32px;
+      font-weight: bold;
+      color: #ffffff;
+      padding: 20px 40px;
+      border-radius: 10px;
+      background-color: rgba(0,0,0,0.6);
+      border: 3px solid #00ffe0;
+      width: fit-content;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #00ffe0;
+      animation: typing 3s steps(20) 1, blink 0.7s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      0%, 100% { border-right-color: #00ffe0; }
+      50% { border-right-color: transparent; }
+    }
+
+    .image-boxes {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 30px;
+      gap: 25px;
+    }
+
+    .box {
+      width: 22%;
+      min-width: 250px;
+      height: 220px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fff;
+    }
+
+    .box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .box:hover img {
+      transform: scale(1.1);
+    }
+
+    .nav2 {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      flex-wrap: wrap;
+    }
+
+    .nav2 a {
+      color: #ffeb3b;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 18px;
+      transition: 0.3s ease;
+      border-radius: 6px;
+    }
+
+    .nav2 a:hover {
+      background: #ffeb3b;
+      color: black;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #ddd;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        width: 90%;
+      }
+
+      .popup-text {
+        font-size: 24px;
+        padding: 15px 25px;
+      }
+
+      .navbar h1 {
+        font-size: 22px;
+      }
+    }
+    
+#new{
+  animation: aniket 20s infinite linear;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+
+
+}
+
+@keyframes aniket{
+  0%{
+      background-image:url('love12.jpg');
+  }
+  20%{
+      background-image: url('love13.jpg');
+  }
+  40%{
+      background-image:url('love11.jpg');
+  }
+  60%{
+      background-image: url('love10.jpg');
+  }
+  80%{
+      background-image: url('love9.jpg');
+  }
+  100%{
+      background-image: url('love8.jpg');
+  }
+}
+
+#new2{
+  animation: anik 20s infinite linear;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+
+
+}
+
+@keyframes anik{
+  0%{
+      background-image:url('love2.jpg');
+  }
+  20%{
+      background-image: url('love3.jpg');
+  }
+  40%{
+      background-image:url('love4.jpg');
+  }
+  60%{
+      background-image: url('love5.jpg');
+  }
+  80%{
+      background-image: url('love6.jpg');
+  }
+  100%{
+      background-image: url('love7.jpg');
+  }
+}
+
+#new3{
+  animation: anike 20s infinite linear;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+
+
+}
+
+@keyframes anike{
+  0%{
+      background-image:url('love1.jpg');
+  }
+  20%{
+      background-image: url('love2.jpg');
+  }
+  40%{
+      background-image:url('img12.jpg');
+  }
+  60%{
+      background-image: url('img11.jpg');
+  }
+  80%{
+      background-image: url('img10.jpg');
+  }
+  100%{
+      background-image: url('img9.jpg');
+  }
+}
+
+#new4{
+  animation: ani 20s infinite linear;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+
+
+}
+
+@keyframes ani{
+  0%{
+      background-image:url('img7.jpg');
+  }
+  20%{
+      background-image: url('img6.jpg');
+  }
+  40%{
+      background-image:url('img5.jpg');
+  }
+  60%{
+      background-image: url('img4.jpg');
+  }
+  80%{
+      background-image: url('img3.jpg');
+  }
+  100%{
+      background-image: url('img2.jpg');
+  }
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - JRU VALE</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0e0e0e;
+      color: #f0f0f0;
+      min-height: 100vh;
+    }
+
+    .top-banner {
+      width: 100%;
+      height: 34vh;
+      background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') center center no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .top-banner::after {
+      content: "Get in Touch";
+      position: absolute;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 12px 30px;
+      border-radius: 12px;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      animation: glowBox 2s ease-in-out;
+    }
+
+    @keyframes glowBox {
+      from {
+        transform: scale(0.96);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .contact-form h3 {
+      text-align: center;
+      font-size: 2rem;
+      color: #00f7ff;
+      margin-bottom: 25px;
+      animation: glowText 2s infinite alternate;
+    }
+
+    @keyframes glowText {
+      from {
+        text-shadow: 0 0 5px #0ff;
+      }
+      to {
+        text-shadow: 0 0 15px #0ff, 0 0 25px #00f7ff;
+      }
+    }
+
+    .contact-form input,
+    .contact-form button {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .contact-form input {
+      background: #292929;
+      color: white;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .contact-form input:focus {
+      border: 1px solid #0ff;
+      box-shadow: 0 0 10px #0ff;
+    }
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px 15px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 8px;
+        background: #292929;
+        color: white;
+        font-size: 1rem;
+        resize: vertical;
+        outline: none;
+        transition: 0.3s;
+      }
+      
+      .contact-form textarea:focus {
+        border: 1px solid #0ff;
+        box-shadow: 0 0 10px #0ff;
+      }
+      
+
+    .contact-form button {
+      background-color: #00f7ff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #00c2c2;
+      box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+    }
+
+    @media (max-width: 600px) {
+      .top-banner::after {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="top-banner"></div>
+
+  <div class="contact-form">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <h3 id="love">Contact US</h3>
+
+      <input type="hidden" name="access_key" value="181b355f-c2b5-4aa0-a7b2-8bf727e96e15"/>
+
+      <input type="text" name="name" id="name" placeholder="Your Name" required />
+      <input type="email" name="email" id="email" placeholder="Email Id" required />
+      <input type="phone" name="phone" id="phone" placeholder="Phone No." required />
+      <textarea name="query" id="query" rows="5" placeholder="Add Your Query Here..." required></textarea>
+      
+      <button id="sub" type="submit">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 JRU VALE. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - JRU VALE</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #121212;
+      color: #f0f0f0;
+    }
+
+    .top-banner {
+      width: 100%;
+      height: 34vh;
+      background: url('anii.jpg') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      animation: nom 20s infinite linear;
+    }
+
+    @keyframes nom{
+        0%{
+            background-image:url('nom1.jpg');
+        }
+        20%{
+            background-image: url('nom3.jpg');
+        }
+        40%{
+            background-image:url('nom5.jpg');
+        }
+        60%{
+            background-image: url('nom4.jpg');
+        }
+        80%{
+            background-image: url('nom2.jpg');
+        }
+        100%{
+            background-image: url('nom3.jpg');
+        }
+      }
+
+
+    .top-banner::after {
+      content: "About JRU VALE";
+      position: absolute;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 12px 30px;
+      border-radius: 10px;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .about {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #00f7ff;
+      }
+      to {
+        text-shadow: 0 0 20px #00f7ff, 0 0 30px #0ff;
+      }
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    .about-box {
+      flex: 1 1 45%;
+      background: #1e1e1e;
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      animation: zoomIn 1s ease-in;
+    }
+
+    .about-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .about-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .loader {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .dots {
+      width: 60px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .dots span {
+      width: 12px;
+      height: 12px;
+      background: #0ff;
+      border-radius: 50%;
+      animation: bounce 1.2s infinite ease-in-out;
+    }
+
+    .dots span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .dots span:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    @media (max-width: 600px) {
+        .top-banner {
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color:white; 
+        }
+      }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-box {
+        flex: 1 1 100%;
+      }
+
+      .top-banner::after {
+        font-size: 1.6rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-banner"></div>
+
+  <section class="about">
+    <h2>Who We Are</h2>
+    <div class="about-content">
+      <div class="about-box">
+        <img src="vish.jpg" alt="Campus">
+        <p>
+          Welcome to JRU VALE! We are a vibrant student community sharing memories, knowledge, and creativity. Our mission is to celebrate campus life, natural beauty, and digital fun.
+        </p>
+      </div>
+      <div class="about-box">
+        <img src="anikw.jpg" alt="Team">
+        <p>
+        We and our boys love to travel different places, explore hidden places, and capture the moments and love the nature.        </p>
+      </div>
+      <div class="about-box">
+        <img src="gof1.jpg" alt="Events">
+        <p>
+Love to capture the beautiful images and spend time in nature, Photography and exploring.         </p>
+      </div>
+      <div class="about-box">
+        <img src="gof.jpg" alt="Gallery">
+        <p>
+Photo Editing , video editing, making memes and comedy videos on instagram in short this page contains meme, video ,photos.        </p>
+      </div>
+    </div>
+
+    <div class="loader">
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
